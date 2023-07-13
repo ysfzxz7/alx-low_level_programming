@@ -15,6 +15,6 @@ Dora Korpar, 2015-10-19\n";
 	do {
 		putchar((int) str[i]);
 		i++;
-	}while(i < len);
-return (1);
+	} while (i < len);
+	return (1);
 }
