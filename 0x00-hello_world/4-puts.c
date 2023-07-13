@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- *this function is to print a phrase using puts() function
+ *the main function is to print a phrase using puts() function
  *
  *
  *
- * /
+ */
 	int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
