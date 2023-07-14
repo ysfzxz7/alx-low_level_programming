@@ -12,7 +12,7 @@ int main(void)
 
 	for (chaar = 97; chaar < 123; chaar++)
 	{
-	if (chaar == 145 || chaar == 160)
+	if (chaar == 101 || chaar == 113)
 		continue;
 	else
 		putchar(chaar);
