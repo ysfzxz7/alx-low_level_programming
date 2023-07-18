@@ -13,5 +13,5 @@
 		do {
 			print_alphabet();
 			i++;
-		} while (i<10);
+		} while (i < 10);
 	}
