@@ -21,17 +21,16 @@ void times_table(void)
 				_putchar(' ');
 				if (sum < 10)
 					_putchar(' ');
-				 else
+				else
 					_putchar((sum / 10) + 48);
 				_putchar((sum % 10) + 48);
 			} else
 			{
 			_putchar('0');
 			}
-			if (j < 9){
-			_putchar(',');
+			if (j < 9)
+				_putchar(',');
 			}
-		}
 		_putchar('\n');
 	}
 }
