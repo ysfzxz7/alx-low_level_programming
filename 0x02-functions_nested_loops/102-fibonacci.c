@@ -18,7 +18,7 @@ int main(void)
 	i = j;
 	j = sum;
 	printf("%lu", sum);
-	if (ptr >= 4)
+	if (ptr == 49)
 	{
 		printf("\n");
 	}
