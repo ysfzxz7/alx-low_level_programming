@@ -12,6 +12,6 @@ void print_alphabet_x10(void)
 	do {
 		print_alphabet();
 		i++;
-	} while (i >= 10);
+	} while (i <= 10);
 
 }
