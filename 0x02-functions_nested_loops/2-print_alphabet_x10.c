@@ -1,10 +1,9 @@
 #include "main.h"
 #include "1-alphabet.c"
-/**
- *print_alphabet_x10 - print the alph char *10.
- *
- */
 
+/**
+ * print_alphabet_x10 - prints alphabet in lower case
+ */
 void print_alphabet_x10(void)
 {
 	int i = 0;
@@ -12,6 +11,5 @@ void print_alphabet_x10(void)
 	do {
 		print_alphabet();
 		i++;
-	} while (i <= 10);
-
+	} while (i < 10);
 }
