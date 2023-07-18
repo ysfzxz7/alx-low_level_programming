@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 /**
+ *main - entry point
  *
- *
- *
+ *Return: Always (0);
  *
  */
-int main(void){
-	int i,sum;
+
+int main(void)
+{
+	int i, sum;
 
 	for (i = 0; i < 1024; i++)
 	{
@@ -15,7 +17,7 @@ int main(void){
 		{
 			sum += i;
 		}
-	}	
-	printf("%d\n",sum);
+	}
+	printf("%d\n", sum);
 	return (0);
 }
