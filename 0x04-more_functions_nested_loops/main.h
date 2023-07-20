@@ -44,4 +44,8 @@ void print_triangle(int size);
 
 int _putchar(char c);
 
+/*======= print long number=====*/
+
+void print_number(int n);
+
 #endif
