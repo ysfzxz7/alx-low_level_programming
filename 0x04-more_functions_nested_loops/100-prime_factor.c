@@ -8,15 +8,15 @@
 
 int main(void)
 {
-	unsigned long number = 612852475143, i;
+	unsigned long num = 612852475143, i;
 
-	for (i = 2; i < number; i++)
+	for (i = 2; i < num; i++)
 	{
-		if (number % i == 0)
-			number /= i;
+		if (num % i == 0)
+			num /= i;
 	}
 
-	printf("%lu\n", number);
+	printf("%lu\n", num);
 
 	return (0);
 }
