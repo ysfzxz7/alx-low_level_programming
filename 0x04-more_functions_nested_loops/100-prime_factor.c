@@ -1,25 +1,22 @@
 #include <stdio.h>
 
 /**
+ * main - the main func 
  *
- *main - entry point for this function
- *
- *return: 0;
- *
+ * Return:  (0) (Success)
  */
 
 int main(void)
 {
-	unsigned long number = 612852475143 , factor;
+	unsigned long number = 612852475143, i;
 
-	for (factor = 2; factor < number; )
+	for (i = 2; i < number; i++)
 	{
-		if (number % factor == 0)
-		{
-			number /= factor;
-		}
-		factor++;
+		if (number % i == 0)
+			number /= i;
 	}
+
 	printf("%lu\n", number);
+
 	return (0);
 }
