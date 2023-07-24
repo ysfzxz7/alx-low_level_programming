@@ -23,8 +23,7 @@ int _atoi(char *s)
 			result = result * 10 + (*s - '0');
 		else if (result > 0)
 			break;
-	}
-	while (*s++);
+	} while (*s++);
 	rt = result * sign;
 	return (rt);
 }
