@@ -9,5 +9,8 @@ void swap_int(int *a, int *b);
 /*=====the len of the string========*/
 int _strlen(char *s);
 
-/*==================*/
+/*=======_puts=========*/
+void _puts(char *str);
+
+
 #endif
