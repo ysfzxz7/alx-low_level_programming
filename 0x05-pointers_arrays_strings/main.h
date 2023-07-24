@@ -12,5 +12,8 @@ int _strlen(char *s);
 /*=======_puts=========*/
 void _puts(char *str);
 
+/*=====revers a string====*/
+void print_rev(char *s);
 
+/*======*/
 #endif
