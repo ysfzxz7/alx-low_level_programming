@@ -6,5 +6,8 @@ void reset_to_98(int *n);
 /*======swap two int=====*/
 void swap_int(int *a, int *b);
 
-/*================*/
+/*=====the len of the string========*/
+int _strlen(char *s);
+
+/*==================*/
 #endif
