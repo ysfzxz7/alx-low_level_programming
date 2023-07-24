@@ -24,5 +24,10 @@ void puts2(char *str);
 /*===============the  putchar ======*/
 int _putchar(char c);
 
+/*=======print only the half of the string====*/
+void puts_half(char *str);
+
+/*=================*/
+
 
 #endif
