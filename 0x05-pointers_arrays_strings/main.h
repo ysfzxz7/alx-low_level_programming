@@ -15,5 +15,8 @@ void _puts(char *str);
 /*=====revers a string====*/
 void print_rev(char *s);
 
-/*======*/
+/*====reves a string ======*/
+void rev_string(char *s);
+
+/*==============*/
 #endif
