@@ -10,22 +10,19 @@
  *Return: the result
  */
 
-
 int _atoi(char *s)
 {
-	int sign;
-	unsigned int result;
+	int status = 1;
+	unsigned int num = 0;
 
-	sign = 1;
-	result = 0;
 	do {
 		if (*s == '-')
-			sign *= -1;
-		else if (*s >= '0' || *s <= '9')
-			result = result * 10 + (*s - '0');
-		else if (result > 0)
+			status *= -1;
+		else if (*s >= '0' && *s <= '9')
+			num = num * 10 + (*s - '0');
+		else if (num > 0)
 			break;
 	} while (*s++);
 
-	return (result * sign);
+	return (num * status);
 }
