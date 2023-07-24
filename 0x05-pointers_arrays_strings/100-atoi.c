@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <string.h>
 
 /**
  *_atoi - convert a digit into a number
@@ -11,7 +13,6 @@
 
 int _atoi(char *s)
 {
-	int rt;
 	int sign;
 	unsigned int result;
 
@@ -25,6 +26,6 @@ int _atoi(char *s)
 		else if (result > 0)
 			break;
 	} while (*s++);
-	rt = result * sign;
-	return (rt);
+
+	return (result * sign);
 }
