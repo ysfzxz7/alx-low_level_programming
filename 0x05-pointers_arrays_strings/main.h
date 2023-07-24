@@ -18,5 +18,9 @@ void print_rev(char *s);
 /*====reves a string ======*/
 void rev_string(char *s);
 
-/*==============*/
+/*==helf the lies ==*/
+void puts2(char *str);
+
+
+
 #endif
