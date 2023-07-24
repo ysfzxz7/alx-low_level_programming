@@ -21,6 +21,8 @@ void rev_string(char *s);
 /*==helf the lies ==*/
 void puts2(char *str);
 
+/*===============the  putchar ======*/
+int _putchar(char c);
 
 
 #endif
