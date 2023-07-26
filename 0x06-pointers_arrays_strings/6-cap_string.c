@@ -16,7 +16,7 @@ int is_lower(int letter)
 
 /**
  * is_special - this func check if this char is spesial or not
- * @letter: character
+ * @l: character
  * Return: 1 if special character, 0 ohterwise
  */
 
@@ -37,9 +37,9 @@ int is_special(char l)
 }
 
 /**
- * cap_string - capitalizes the words
- * @s: string included
- * Return: pointer of string 
+ *cap_string - capitalizes the words
+ *@s: string included
+ *Return: pointer of string
  */
 
 char *cap_string(char *s)
