@@ -14,7 +14,7 @@ char *string_toupper(char *s)
 
 	while (*x)
 	{
-		if (*x > 97 && *x < 122)
+		if (*x >= 97 && *x <= 122)
 		{
 			*x = *x - 32;
 		}
