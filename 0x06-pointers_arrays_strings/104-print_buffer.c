@@ -3,7 +3,7 @@
 #include <ctype.h>
 
 /**
- * print_buffer - this func is used to print a given string 
+ * print_buffer - this func is used to print a given string
  * @b: pointer to the string
  * @size: size of the string
  */
