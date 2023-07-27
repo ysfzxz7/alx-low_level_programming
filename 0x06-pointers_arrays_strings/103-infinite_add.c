@@ -12,7 +12,7 @@ char *rev(char *string)
 	int i = 0, l = strlen(string) - 1;
 	int tmp;
 
-	for ( ; i < l; i++, j--)
+	for ( ; i < l; i++, l--)
 	{
 		tmp = string[l];
 		string[l] = string[i];
