@@ -21,5 +21,8 @@ char *_strpbrk(char *s, char *accept);
 /*====== strstr======*/
 char *_strstr(char *haystack, char *needle);
 
+/*======chess=====*/
+void print_chessboard(char (*a)[8]);
+
 
 #endif
