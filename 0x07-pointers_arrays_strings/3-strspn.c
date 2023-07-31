@@ -3,28 +3,7 @@
 #include <string.h>
 
 /**
- *_found - a function check the occurrence of a char
- *@string: the looked at
- *@c: the char looked for
- *
- *Return: (1) if found otherwise (0) 
- */
-
-int _found(char *string, char c)
-{
-	int i, lenght = strlen(string);
-
-	while (i <= lenght)
-	{
-		if (string[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-/**
- *_srtspn - look for the occurrence of a char inside a whole
+ *_strspn - look for the occurrence of a char inside a whole
  *@s: the big string
  *@accept: the chars ignored
  *
@@ -33,28 +12,24 @@ int _found(char *string, char c)
 
 unsigned int _strspn(char *s, char *accept)
 {
-	char *ptr = s;
-	int k, i, counter, lenght = strlen(ptr);
+	int i, j, k, flag;
 
-	counter = 0;	
-	for (i = 0; i < lenght; i++)
+	k = 0;
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if(_found(accept, ptr[i]))
+		flag = 0;
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			for (k = 0; k < lenght; k++)
+			if (s[i] == accept[j])
 			{
-				if (_found(accept, ptr[k]))
-				{
-					counter ++;
-				}
-				else
-				{
-					break;
-				}
-				
-			return (counter);
+				k++;
+				flag = 1;
 			}
 		}
+		if (flag == 0)
+		{
+			return (k);
+		}
 	}
-	return (counter);
+	return (0);
 }
