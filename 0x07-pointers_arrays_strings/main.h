@@ -24,5 +24,8 @@ char *_strstr(char *haystack, char *needle);
 /*======chess=====*/
 void print_chessboard(char (*a)[8]);
 
+/*===============sum diag==========*/
+void print_diagsums(int *a, int size);
+
 
 #endif
