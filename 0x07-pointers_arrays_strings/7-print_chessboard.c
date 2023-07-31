@@ -2,7 +2,6 @@
 #include <stdio.h>
 
 /**
- *
  *print_chessboard - func that print a chessborad
  *@a: a pointer to the matrix of the chess
  *
