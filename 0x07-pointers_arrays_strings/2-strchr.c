@@ -6,7 +6,7 @@
  *@s: a pointer to the big string
  *@c: the string looking for
  *
- *Retrun: (NULL) if not found otherwise return a pointer
+ *Return: (NULL) if not found otherwise return a pointer
  *
  */
 
