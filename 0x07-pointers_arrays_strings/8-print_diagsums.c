@@ -18,6 +18,6 @@ void print_diagsums(int *a, int size)
 	{
 	sum1 += *(a + (size * j) + j);
 	sum2 += *(a + (size * j) + (size - j - 1));
-	}	
+	}
 	printf("%d, %d\n", sum1, sum2);
 }
