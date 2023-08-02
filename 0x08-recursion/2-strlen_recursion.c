@@ -2,8 +2,9 @@
 
 /**
  *_strlen_recursion - get a string len using recur
- *
  *@s: the string used
+ *
+ *Return: the lenght of string
  */
 
 int _strlen_recursion(char *s)
