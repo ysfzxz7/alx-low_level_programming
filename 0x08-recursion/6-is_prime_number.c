@@ -2,8 +2,8 @@
 
 /**
  * is_prime_nbr - func used to find the prim number
- * @n: first nbr
- * @g: what is the nbr
+ * @x: first nbr
+ * @y: what is the nbr
  * Return: 1 if number is prime otherwide 0
  */
 
@@ -16,7 +16,7 @@ int is_prime_nbr(int x, int y)
 	return (is_prime_nbr(x, y - 1));
 }
 /**
-* is_prime_number - check if a number is prime or not
+*is_prime_number - check if a number is prime or not
 *@n: number needs to check
 *
 *Return: true if number if prime
