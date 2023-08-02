@@ -11,7 +11,7 @@ int find_rt(int x, int y)
 {
 	if (y * y == x)
 		return (y);
-	else if (y * y < n)
+	else if (y * y < x)
 		return (find_rt(x, y + 1));
 
 	return (-1);
