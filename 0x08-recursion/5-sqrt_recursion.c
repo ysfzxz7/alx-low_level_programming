@@ -1,33 +1,35 @@
 #include "main.h"
 
 /**
- * _sqrt - calculat the square root of numberr
- * @y: tested number 
- * @i: square number
- *
- * Return: the square root of n
+ * find_rt - a func that find the root
+ * @x: the first nbr
+ * @g: gus nbr
+ * Return: return the root nbr
  */
 
-int _sqrt_calculator(int i, int y)
+int find_rt(int x, int y)
 {
-	if (y > i / 2)
-		return (-1);
-	else if (y * y == i)
+	if (y * y == x)
 		return (y);
-	return (_sqrt_calculator(y + 1, i));
+	else if (y * y < n)
+		return (find_rt(x, y + 1));
+
+	return (-1);
 }
 
 /**
-* _sqrt_recursion - gives the natrual number
-* @n: number used
-*
-* Return: n is the sauqre root 
-*/
+ * _sqrt_recursion - the main funcc
+ * @n: gvn nbr
+ * Return: -1 if the nbr doesn't have the natural nbr
+ */
 
 int _sqrt_recursion(int n)
 {
+	int x = 2;
+
 	if (n == 0 || n == 1)
 		return (n);
-	return (_sqrt_calculator(0, n));
+	else if (n < 0)
+		return (-1);
+	return (find_rt(n, x));
 }
-
