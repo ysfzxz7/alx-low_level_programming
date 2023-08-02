@@ -3,7 +3,7 @@
 /**
  * find_rt - a func that find the root
  * @x: the first nbr
- * @g: gus nbr
+ * @y: gus nbr
  * Return: return the root nbr
  */
 
