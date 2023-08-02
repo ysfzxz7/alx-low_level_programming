@@ -15,7 +15,7 @@ int palindrome_checker(char *s, int i, int j)
 		return (1);
 	else if (s[i] != s[j])
 		return (0);
-	return (palindrome(s, i + 1, j - 1));
+	return (palindrome_checker(s, i + 1, j - 1));
 }
 
 /**
