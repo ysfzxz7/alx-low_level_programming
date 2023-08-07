@@ -5,7 +5,7 @@
  * free_grid - function that frees a grid ptrs.
  * @grid: double  ptr array.
  * @height: height of the arraay
- * 
+ *
  */
 
 void free_grid(int **grid, int height)
