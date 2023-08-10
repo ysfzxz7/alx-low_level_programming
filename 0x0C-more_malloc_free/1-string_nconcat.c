@@ -13,7 +13,12 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, len = strlen(s1), s2len = strlen(s2);
+	unsigned int i = 0, j = 0, len = 0, s2len = 0;
+	
+	if (s1 != NULL)
+		len = strlen(s1);
+	if (s2 != NULL)
+		s2len = strlen(s2);
 	char *des = realloc(NULL, len + n + 1);
 
 	if (des == NULL)
@@ -22,6 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n > s2len)
 		n = s2len;
+
 	while (i < len)
 	{
 		des[i] = s1[i];
