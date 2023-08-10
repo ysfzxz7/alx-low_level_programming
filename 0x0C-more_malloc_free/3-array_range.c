@@ -20,10 +20,9 @@ int *array_range(int min, int max)
 	array = malloc(sizeof(array) * max);
 	if (array == NULL)
 		return (NULL);
-	for (; i <= max; min++)
+	for (; i <= max; i++)
 	{
 		array[i] = i;
-		i++;
 	}
 	return (array);
 }
