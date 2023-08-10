@@ -13,14 +13,14 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	char *des;
 	unsigned int i = 0, j = 0, len = 0, s2len = 0;
-	char *des = realloc(NULL, len + n + 1);
 	
 	if (s1 != NULL)
 		len = strlen(s1);
 	if (s2 != NULL)
 		s2len = strlen(s2);
-
+	des = realloc(NULL, len + n + 1);
 	if (des == NULL)
 	{
 		return (NULL);
