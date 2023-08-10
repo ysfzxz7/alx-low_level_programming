@@ -1,36 +1,27 @@
 #ifndef MAIN_H
 #define MAIN_H
+/*=====creat array====*/
+char *create_array(unsigned int size, char c);
 
-/*====_putchar======*/
+/*=======str dup =======*/
+char *_strdup(char *str);
+
+/*=======strconcat ========*/
+char *str_concat(char *s1, char *s2);
+
+/*========alooc grid======*/
+int **alloc_grid(int width, int height);
+
+/*====free grid ======*/
+void free_grid(int **grid, int height);
+
+/*=====argstostr====*/
+char *argstostr(int ac, char **av);
+
+/*=====strtow======*/
+char **strtow(char *str);
+
+/*======_putchar=====*/
 int _putchar(char c);
-
-
-/*=======puts=======*/
-void _puts_recursion(char *s);
-
-/*======revers======*/
-void _print_rev_recursion(char *s);
-
-/*====strlen=====*/
-int _strlen_recursion(char *s);
-
-
-/*=====factorial========*/
-int factorial(int n);
-
-/*======power========*/
-int _pow_recursion(int x, int y);
-
-/*====sqrt======*/
-int _sqrt_recursion(int n);
-
-/*=====prim number=======*/
-int is_prime_number(int n);
-
-/*=====plindrom=====*/
-int is_palindrome(char *s);
-
-/*=======wildcmp=====*/
-int wildcmp(char *s1, char *s2);
 
 #endif
