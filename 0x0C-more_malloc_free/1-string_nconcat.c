@@ -13,13 +13,15 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, len = strlen(s1);
+	unsigned int i = 0, j = 0, len = strlen(s1), s2len = strlen(s2);
 	char *des = realloc(NULL, len + n + 1);
 
 	if (des == NULL)
 	{
 		return (NULL);
 	}
+	if (n > s2len)
+		n = s2len;
 	while (i < len)
 	{
 		des[i] = s1[i];
