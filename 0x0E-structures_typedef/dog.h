@@ -16,3 +16,9 @@ struct dog
 };
 #endif
 
+#ifndef __init__DOG
+#define __init__DOG
+void init_dog(struct dog *d, char *name, float age, char *owner);
+#endif
+
+
