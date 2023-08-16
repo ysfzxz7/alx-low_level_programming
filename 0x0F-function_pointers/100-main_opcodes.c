@@ -20,6 +20,7 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(1);
 	}
+
 	byte = atoi(argv[1]);
 
 	if (byte < 0)
@@ -27,15 +28,17 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		exit(2);
 	}
-	for (i = 0; i < byte - 1; i++)
+
+	for (i = 0; i < byte; i++)
 	{
 	operator_code = *(unsigned char *)address;
 	printf("%.2x", operator_code);
+	
 	if (i == byte - 1)
-		continue;
+	continue;
 	printf(" ");
 	address++;
-}
+	}
 	printf("\n");
 	return (0);
 
