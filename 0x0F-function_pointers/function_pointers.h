@@ -18,4 +18,10 @@ void print_name_uppercase(char *name);
  */
 void array_iterator(int *array, size_t size, void (*action)(int));
 
+/**
+ *a funct that search for a interger
+ *
+ */
+int int_index(int *array, int size, int (*cmp)(int));
+
 #endif
