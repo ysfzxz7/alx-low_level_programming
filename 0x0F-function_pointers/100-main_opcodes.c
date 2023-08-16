@@ -33,7 +33,6 @@ int main(int argc, char **argv)
 	{
 	operator_code = *(unsigned char *)address;
 	printf("%.2x", operator_code);
-	
 	if (i == byte - 1)
 	continue;
 	printf(" ");
