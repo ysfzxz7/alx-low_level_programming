@@ -61,32 +61,40 @@ void _floatpr(va_list arg)
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, j;
-	va_list args;
-	char *separ = "";
+va_list args;
 
-	printer_t funcs[] = {
-		{"c", _charpr},
-		{"s", _strpr},
-		{"f", _floatpr},
-		{"i", _intpr},
-	};
+int i = 0, j = 0;
 
-	va_start(args, format);
-	while (format && (*(format + i)))
-	{
-		j = 0;
-		while (j < 4 && (*(format + i) != *(funcs[j].sym)))
-		j++;
+char *separator = "";
 
-		if (j < 4)
-		{
-			printf("%s", separ);
-			funcs[j].print(args);
-			separ = ", ";
-		}
-		i++;
-	}
-	printf("\n");
-	va_end(args);
+printer_t funcs[] = {
+{"c", _charpr},
+{"i", _intpr},
+{"f", _floatpr},
+{"s", _strpr}
+};
+
+va_start(args, format);
+
+while (format && (*(format + i)))
+{
+j = 0;
+
+while (j < 4 && (*(format + i) != *(funcs[j].sym)))
+j++;
+
+if (j < 4)
+{
+printf("%s", separator);
+funcs[j].print(args);
+separator = ", ";
+}
+
+i++;
+
+}
+
+printf("\n");
+
+va_end(args);
 }
