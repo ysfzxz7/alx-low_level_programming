@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 typedef struct printer{
-char *sym;
+char *symbol;
 void (*print)(va_list arg);
 } printer_t;
 
