@@ -1,64 +1,77 @@
-#include <stdio.h>
 #include "variadic_functions.h"
-#include <stdarg.h>
+
 
 /**
- *_strpr - print string type
- *
- *@arg: the given strig
- */
-void _strpr(va_list arg)
+* print_char - Prints a char.
+* @arg: A list of arguments pointing to
+* the character to be printed.
+*/
+void print_char(va_list arg)
 {
-	char *str;
+char letter;
 
-	str = va_arg(arg, char *);
+letter = va_arg(arg, int);
 
-	if (!arg)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s",str);
+printf("%c", letter);
 }
 
 /**
- *_intpr - int printer
- *@arg: the given int
- */
-void _intpr(va_list arg)
+* print_int - Prints an int.
+* @arg: A list of arguments pointing to
+* the integer to be printed.
+*/
+void print_int(va_list arg)
 {
-	int i = va_arg(arg, int);
+int num;
 
-	printf("%d", i);
+num = va_arg(arg, int);
+
+printf("%d", num);
+}
+
+
+/**
+* print_float - Prints a float.
+* @arg: A list of arguments pointing to
+* the float to be printed.
+*/
+void print_float(va_list arg)
+{
+float num;
+
+num = va_arg(arg, double);
+
+printf("%f", num);
+}
+
+
+
+/**
+* print_string - Prints a string.
+* @arg: A list of arguments pointing to
+* the string to be printed.
+*/
+void print_string(va_list arg)
+{
+char *str;
+
+str = va_arg(arg, char *);
+
+if (str == NULL)
+{
+printf("(nil)");
+return;
+}
+
+printf("%s", str);
 }
 
 /**
- *_charpr - char printer
- *@arg: the given char
- */
-void _charpr(va_list arg)
-{
-	char c = va_arg(arg, int);
-
-	printf("%c", c);
-}
-
-/**
- *_floatpr - float printer
- *@arg: the float given
- */
-void _floatpr(va_list arg)
-{
-	float f = va_arg(arg, double);
-
-	printf("%f", f);
-}
-
-/**
- *print_all - print a mixed arguments
- *@format: the palceholder
- */
-
+*print_all - prints anything
+*@format: format of input
+*
+*Return: nothing
+*/
 void print_all(const char * const format, ...)
 {
 va_list args;
@@ -68,10 +81,10 @@ int i = 0, j = 0;
 char *separator = "";
 
 printer_t funcs[] = {
-{"c", _charpr},
-{"i", _intpr},
-{"f", _floatpr},
-{"s", _strpr}
+{"c", print_char},
+{"i", print_int},
+{"f", print_float},
+{"s", print_string}
 };
 
 va_start(args, format);
@@ -80,7 +93,7 @@ while (format && (*(format + i)))
 {
 j = 0;
 
-while (j < 4 && (*(format + i) != *(funcs[j].sym)))
+while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
 j++;
 
 if (j < 4)
