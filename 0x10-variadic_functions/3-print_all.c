@@ -10,14 +10,13 @@
 void _strpr(va_list arg)
 {
 	char *str;
-	char *_null_str = "(nil)";
 
 	str = va_arg(arg, char *);
 
 	if (arg)
 		printf("%s", str);
 	else
-		printf("%s", _null_str);
+		printf("(nil)");
 }
 
 /**
