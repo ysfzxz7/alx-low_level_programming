@@ -18,8 +18,8 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	if (!str)
 	{
-		free(new);
-		return(NULL)
+		free(n_node);
+		return(NULL);
 	}
 	while(str)
 		lenght++;
