@@ -21,4 +21,7 @@ int _putchar(char c);
 
 /*print the list fun*/
 size_t print_list(const list_t *h);
+
+/*print the lenght of the list*/
+size_t list_len(const list_t *h);
 #endif
