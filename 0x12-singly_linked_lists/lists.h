@@ -24,4 +24,8 @@ size_t print_list(const list_t *h);
 
 /*print the lenght of the list*/
 size_t list_len(const list_t *h);
+
+/**/
+/*add to the linked list*/
+list_t *add_node(list_t **head, const char *str);
 #endif
