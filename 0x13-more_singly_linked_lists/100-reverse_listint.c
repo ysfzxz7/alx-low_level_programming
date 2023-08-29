@@ -20,9 +20,9 @@ listint_t *reverse_listint(listint_t **head)
 		ah = (*head)->next;
 		(*head)->next = be;
 		be = *head;
-		*head = ahead;
+		*head = ah;
 	}
-	(*head)->next = behind;
+	(*head)->next = be;
 
 	return (*head);
 }
