@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *creat_file - a func that creat a func
+ *create_file - a func that creat a func
  *@filename: the file name
  *@text_content: the content of the file,
  *Return: the status if done 1 if not -1
