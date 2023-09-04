@@ -19,8 +19,8 @@ int create_file(const char *filename, char *text_content)
 	if (text_content)
 		for ( ; text_content[len]; )
 			len++;
-	if (write(fd, text_content, len) == -1)
+	if (write(filed, text_content, len) == -1)
 		return (-1);
 	close(filed);
-	return (sts)
+	return (sts);
 }
