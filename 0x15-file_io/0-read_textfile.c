@@ -26,12 +26,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	do {
 	if (rest < BUFF_SIZE)
 	{
-		close(fd);
-		return (0);
+		read_flag = read(fd, buf, rest);
 	}
 	else
-	read_flag = read(fd, buf, rest);
-		if (read_flag == -1)
+		read_flag = read(fd, buf, sizeof(buf));
+	if (read_flag == -1)
 	{
 		close(fd);
 		return (0);
