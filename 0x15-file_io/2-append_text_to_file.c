@@ -2,9 +2,9 @@
 
 /**
  *append_text_to_file - apped some text to an existing file
- *@filenalme: the file name
+ *@filename: the file name
  *@text_content: the text wants to be added
- *Retrun: if success 1 otherwise -1
+ *Return: if success 1 otherwise -1
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
