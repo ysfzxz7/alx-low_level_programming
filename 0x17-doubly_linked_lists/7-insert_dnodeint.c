@@ -7,28 +7,41 @@
  *@n: the value of the node
  *Return: the ptr to the new node or null if fails
  */
-listint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *curr = *h;
-	unsigned int place = 0;
-	dlistint_t *new, *tmp;
+	unsigned int i = 0;
+	dlistint_t *new, *next, *prev;
 
-	new = malloc(sizeof(dlistint *));
+	if (!h)
+		return (NULL);
+	prev = *h;
+	next = *h;
+
+	new = malloc(sizeof(dlistint_t *));
 	if (!new)
 		return (NULL);
 	new->n = n;
-	new->prev = NULL;
-	new->next = NULL;
-
-	while (curr->next && idx != place)
+	if (idx == 0)
 	{
-		place++;
-		curr = curr->next;
+		*h = new;
+		new->next = next;
+		if (next)
+			next->prev = new;
+		new->prev = NULL;
+		return (new);
 	}
-	tmp = curr->prev;
-	curr->prev = new;
-	new->prev = tmp;
-	new->next = curr;
-	new->next = new->prev
-
+	if (next)
+		next = next->next;
+	else
+		return (NULL);
+	for (i = 1; next != NULL && i < idx; i++)
+	{
+		prev = prev->next;
+		next = next->next;
+		new->next = next;
+		if (next)
+			next->prev = new;
+		return (new);
+	}
+	return (NULL);
 }
