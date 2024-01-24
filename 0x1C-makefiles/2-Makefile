@@ -1,0 +1,19 @@
+# Define the compiler.
+CC = gcc
+
+# Define the .c files.
+SRC = main.c school.c
+
+# Define the output file name.
+NAME = school
+
+# compile the .c files.
+OBJ: main.o school.o
+	$(CC) -c $(SRC)
+
+# Build the whole command.
+all:
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	rm rf *.o
